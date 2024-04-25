@@ -14,3 +14,13 @@ class User(models.Model):
     email = models.EmailField(unique=True, verbose_name='Correo electronico')
     password = models.CharField(max_length=50, verbose_name='Contraseña')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Creado')
+
+    def __str__(self):
+        return f'{self.username}'
+
+    def full_name(self):
+        return f'{self.first_name} {self.last_name}'
+
+    class Meta:
+        verbose_name = 'Usuario'
+        verbose_name_plural = 'Usuarios'
