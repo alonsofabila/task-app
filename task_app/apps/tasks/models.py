@@ -22,6 +22,9 @@ class Tasks(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Creado por")
 
+    def __str__(self):
+        return self.title
+
     class Meta:
         verbose_name = 'Tarea'
         verbose_name_plural = 'Tareas'
