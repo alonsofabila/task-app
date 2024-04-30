@@ -7,3 +7,4 @@ class TasksSerializer(serializers.ModelSerializer):
         model = Tasks
 
         fields = ('id', 'title', 'content', 'status', 'status', 'created_at', 'created_by')
+        extra_kwargs = {'created_by': {'read_only': True}}
