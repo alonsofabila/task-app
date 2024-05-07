@@ -1,6 +1,6 @@
 from django.db import models
 from task_app.apps.users.functions import generate_custom_uuid
-from task_app.apps.users.models import User
+from django.contrib.auth.models import User
 
 
 # Create your models here.
