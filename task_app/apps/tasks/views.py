@@ -11,7 +11,7 @@ class TasksViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        user_task_list = Tasks.objects.filter(created_by=self.request.user).order_by('status')
+        user_task_list = Tasks.objects.filter(created_by=self.request.user).order_by('status', '-created_at')
         return user_task_list
 
     def perform_create(self, serializer):
