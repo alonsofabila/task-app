@@ -155,6 +155,6 @@ SIMPLE_JWT = {
 }
 
 # Cors authorized domains
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+CORS_ALLOWED_ORIGINS = ['http://localhost:8080']
 
 CORS_ALLOWED_CREDENTIALS = True
