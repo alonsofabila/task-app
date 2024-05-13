@@ -89,10 +89,25 @@ DATABASES = {
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': 'db', # change it if you are gonna run it locally to 127.0.0.1
+        'HOST': os.getenv('HOST'),
+        'PORT': os.getenv('PORT'),
+    }
+}
+
+"""
+Use this config if you are using docker
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
+"""
 
 
 # Password validation
